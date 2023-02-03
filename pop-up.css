@@ -1,0 +1,89 @@
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.popup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 50%;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0.295);
+  border-radius: 15px;
+  transform: translate3d(-50%, -50%, 100000px);
+  animation-duration: 0.3s;
+  animation-name: fadeUp;
+  animation-timing-function: ease-out;
+  opacity: 1;
+  z-index: 100000;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -45%, 100000px);
+  }
+  30%{
+    opacity: 1;
+  }
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle, rgba(0,0,0,0.1) 27%, rgba(0,0,0,0.3) 50%);
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: 100;
+  animation: fade 0.3s ease-out;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.popup-container .popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.popup-header__title {
+  font-size: 36px;
+}
+
+.popup-container .popup-body {
+  padding: 20px;
+}
+.popup-container .popup-body p {
+  margin: 0;
+  line-height: 1.5em;
+  font-size: 16px;
+  text-align: center;
+}
+
+.popup-body__img {
+  justify-self: center;
+  align-self: center;
+  height: auto;
+}
+
+.popup-container .popup-footer a:focus,
+.popup-container .popup-footer a:hover {
+  box-shadow: 0px 0px 4px 1px #444;
+}

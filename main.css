@@ -1,0 +1,136 @@
+.personal-template {
+  font-family: "Nunito";
+  font-size: 16px;
+  font-weight: 400;
+  color: #4f481f;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: 430px auto;
+  gap: 20px;
+}
+
+.characteristic {
+  text-transform: uppercase;
+}
+
+.personal-template__main-info {
+  background-color: #f8ede4;
+  padding: 40px 45px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+.personal-template__additional-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.additional-info__personal-motivation {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.additional-info__personality {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.additional-info__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 0;
+  gap: 20px;
+}
+
+.additional-info__cards .cards__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  width: calc(50% - 20px / 2);
+  gap: 20px;
+}
+
+.additional-info__cards .card__bio {
+  width: 100%;
+  margin-top: 0;
+}
+
+.card,
+.additional-info__the-more-you-know {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #f8ede4;
+  padding: 35px 30px;
+  border-radius: 15px;
+}
+
+.mindset-expectations__item::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #4f481f;
+  width: 100%;
+  height: 1px;
+  bottom: -20px;
+  right: 0;
+}
+
+@media (max-width: 1400px) {
+  .personal-template {
+    display: grid;
+    grid-template-columns: unset;
+  }
+}
+
+@media (max-width: 1024px){
+  .additional-info__personality {
+    display: grid;
+    grid-template-columns: unset;
+    gap: 20px;
+  }
+  .additional-info__the-more-you-know {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px){
+  .additional-info__the-more-you-know {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .personal-template {
+    padding: 10px;
+  }
+  .additional-info__cards .cards__card {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+  }
+  .block-name {
+    align-self: center;
+  }
+
+  .main-info__characteristics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
